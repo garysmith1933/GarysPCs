@@ -4,9 +4,9 @@
 ## D287 – JAVA FRAMEWORKS - Gary Smith
 
 C.  Customize the HTML user interface for your customer’s application. The user interface should include the shop name, the product names, and the names of the parts.
-File Name:
-Line Number:
-Change:
+File Name: mainscreen.html
+Line Number: The whole page. Line 14 - 165.
+Change: Adjusted mainscreen.html with added products, parts, and shop name
 
 Note: Do not remove any elements that were included in the screen. You may add any additional elements you would like or any images, colors, and styles, although it is not required.
 

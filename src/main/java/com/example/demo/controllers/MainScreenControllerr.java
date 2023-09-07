@@ -44,6 +44,7 @@ public class MainScreenControllerr {
     public String listPartsandProducts(Model theModel, @Param("partkeyword") String partkeyword, @Param("productkeyword") String productkeyword){
         //add to the sprig model
         List<Part> partList=partService.listAll(partkeyword);
+        System.out.println(partList);
         theModel.addAttribute("parts",partList);
         theModel.addAttribute("partkeyword",partkeyword);
     //    theModel.addAttribute("products",productService.findAll());

@@ -12,9 +12,9 @@ Note: Do not remove any elements that were included in the screen. You may add a
 
 
 D.  Add an “About” page to the application to describe your chosen customer’s company to web viewers and include navigation to and from the “About” page and the main screen.
-File Name: about.html
-Line Number: the entire page. I added the navigation to get back to the main page on line 16, added the page title on line 17, and about information on line 18.
-Change:
+File Name: about.html, mainscreen.html
+Line Number: the entire page, specifically line 16, 17, and 18 on about.html, line 20 in mainscreen.html
+Change: I added the navigation to get back to the main page on line 16, added the page title on line 17, and about information on line 18. In mainscreen.html, I added the ability to navigate to the home page, this is shown on line 20.
 
 E.  Add a sample inventory appropriate for your chosen store to the application. You should have five parts and five products in your sample inventory and should not overwrite existing data in the database.
 File Name:

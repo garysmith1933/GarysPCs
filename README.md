@@ -17,12 +17,11 @@ Line Number: the entire page, specifically line 16, 17, and 18 on about.html, li
 Change: I added the navigation to get back to the main page on line 16, added the page title on line 17, and about information on line 18. In mainscreen.html, I added the ability to navigate to the home page, this is shown on line 20.
 
 E.  Add a sample inventory appropriate for your chosen store to the application. You should have five parts and five products in your sample inventory and should not overwrite existing data in the database.
-File Name:
-Line Number:
-Change:
-
 Note: Make sure the sample inventory is added only when both the part and product lists are empty. When adding the sample inventory appropriate for the store, the inventory is stored in a set so duplicate items cannot be added to your products. When duplicate items are added, make a “multi-pack” part.
-
+File Name: BootStrapData.java
+Line Number: Line 61 - Line 188
+Change: From Line 61 - Line 154, I created 5 different parts with their names, inventory amounts, company names and ids. I also added logic that checked to see if the data was already in the database, if so, it would skip it and not add a duplicate part.
+From line 164 - line 188, I created 5 different products with their names, inventory amounts,  and prices. I also added logic that checked to see if the data was already in the database, if so, it would skip it and not add a duplicate product.
 
 F.  Add a “Buy Now” button to your product list. Your “Buy Now” button must meet each of the following parameters:
 

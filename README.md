@@ -71,9 +71,10 @@ In Part.java, I split the isValidInventory method into 2 methods thats used for 
 In EnufPartsValidator.java, I added a line that checks if each part that is associated with a part will have atleast the minimum inventory value after the product is updated/created, if it does not an error is shown.
 
 I.  Add at least two unit tests for the maximum and minimum fields to the PartTest class in the test package.
-File Name:
-Line Number:
-Change:
+File Name: PartTest.java
+Line Number: 160 - 176
+Change: I added two tests to PartTest.java, the first one tests the get and set functionality for the minimum value of a part by declaring an integer variable, and then using the set method to set the value of the minimum value to the integer variable.
+The test then compares if the variable is the same as the result of the parts getMinInv method. This is the repeated with a second test part. The entire process is the same for the second test with maximum inventory value instead of the minimum.
 
 J.  Remove the class files for any unused validators in order to clean your code.
 File Name:

@@ -77,6 +77,6 @@ Change: I added two tests to PartTest.java, the first one tests the get and set 
 The test then compares if the variable is the same as the result of the parts getMinInv method. This is the repeated with a second test part. The entire process is the same for the second test with maximum inventory value instead of the minimum.
 
 J.  Remove the class files for any unused validators in order to clean your code.
-File Name:
-Line Number:
-Change:
+File Name: DeletePartsValidator.java, ValidDeletePart.java
+Line Number: The entire page.
+Change: Removed both DeletePartsValidator.java, and ValidDeletePart.java because they were unused.

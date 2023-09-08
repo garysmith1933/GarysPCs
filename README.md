@@ -30,9 +30,12 @@ F.  Add a “Buy Now” button to your product list. Your “Buy Now” button m
 •   The button should decrement the inventory of that product by one. It should not affect the inventory of any of the associated parts.
 
 •   Display a message that indicates the success or failure of a purchase.
-File Name:
-Line Number:
-Change:
+File Name: MainScreenController.java, purchaseController.java, mainscreen.html, purchaseSuccess.html, and purchaseFailure.html.
+Line Number: MainScreenController.java: line 67 - 87, purchaseController.java: line 1 - 18, mainscreen.html: line 81 - 92, purchaseSuccess.html and purchaseFailure.html: line 1 - 13.
+Change: In MainScreenController.java, I added a method to handle the purchase of a product, the method checks if the product exists by searching with the product id. If does not exist, an error is returned. 
+If it does exist, it checks if the product is available for purchase based on the inventory, if so it decrements the products inventory and redirects to a page confirming the purchase, which is the purpose of the purchaseSuccess.html page and the method corresponding to it in the purchaseController.java page.
+If inventory is not available, the page is redirected to the purchase error page, which is the purpose of the purchaseFailure.html file and purchaseFailure method in the purchaseController.java file. In mainscreen.html, I added a form that handles the functionality of the buy button. The input is hidden so that when the button is clicked on, 
+it collects the products id and passes it to the buyProduct method for confirm or deny the purchase.
 
 G. Modify the parts to track maximum and minimum inventory by doing the following:
 

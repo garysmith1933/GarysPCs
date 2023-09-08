@@ -64,6 +64,8 @@ public class BootStrapData implements CommandLineRunner {
         RAM.setInv(12);
         RAM.setPrice(90.0);
         RAM.setId(100L);
+        RAM.setMaxInv(20);
+        RAM.setMinInv(12);
 
         if (this.partRepository.search(RAM.getName()).isEmpty()) {
             outsourcedPartRepository.save(RAM);
@@ -82,6 +84,8 @@ public class BootStrapData implements CommandLineRunner {
         powerSupply.setInv(30);
         powerSupply.setPrice(60.0);
         powerSupply.setId(101L);
+        powerSupply.setMinInv(20);
+        powerSupply.setMaxInv(50);
 
         if (this.partRepository.search(powerSupply.getName()).isEmpty()) {
             outsourcedPartRepository.save(powerSupply);
@@ -100,6 +104,8 @@ public class BootStrapData implements CommandLineRunner {
         pcCase.setInv(30);
         pcCase.setPrice(100.0);
         pcCase.setId(102L);
+        pcCase.setMinInv(30);
+        pcCase.setMaxInv(20);
 
         if (this.partRepository.search(pcCase.getName()).isEmpty()) {
             outsourcedPartRepository.save(pcCase);
@@ -118,6 +124,8 @@ public class BootStrapData implements CommandLineRunner {
         rgb.setInv(50);
         rgb.setPrice(30.0);
         rgb.setId(103L);
+        rgb.setMinInv(20);
+        rgb.setMaxInv(50);
 
         if (this.partRepository.search(rgb.getName()).isEmpty()) {
             outsourcedPartRepository.save(rgb);
@@ -135,6 +143,8 @@ public class BootStrapData implements CommandLineRunner {
         gc.setInv(20);
         gc.setPrice(500.0);
         gc.setId(104L);
+        gc.setMinInv(20);
+        gc.setMaxInv(50);
 
 
         if (this.partRepository.search(gc.getName()).isEmpty()) {

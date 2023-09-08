@@ -31,10 +31,10 @@ F.  Add a “Buy Now” button to your product list. Your “Buy Now” button m
 
 •   Display a message that indicates the success or failure of a purchase.
 File Name: MainScreenController.java, purchaseController.java, mainscreen.html, purchaseSuccess.html, and purchaseFailure.html.
-Line Number: MainScreenController.java: line 67 - 87, purchaseController.java: line 1 - 18, mainscreen.html: line 81 - 92, purchaseSuccess.html and purchaseFailure.html: line 1 - 13.
+Line Number: MainScreenController.java: line 67 - 87, purchaseController.java: line 1 - 18, mainscreen.html: line 81 - 92, purchaseSuccess.html and purchaseFailure.html: line 1 - 13. 
 Change: In MainScreenController.java, I added a method to handle the purchase of a product, the method checks if the product exists by searching with the product id. If does not exist, an error is returned. 
 If it does exist, it checks if the product is available for purchase based on the inventory, if so it decrements the products inventory and redirects to a page confirming the purchase, which is the purpose of the purchaseSuccess.html page and the method corresponding to it in the purchaseController.java page.
-If inventory is not available, the page is redirected to the purchase error page, which is the purpose of the purchaseFailure.html file and purchaseFailure method in the purchaseController.java file. In mainscreen.html, I added a form that handles the functionality of the buy button. The input is hidden so that when the button is clicked on, 
+If inventory is not available, the page is redirected to the purchase error page, which is the purpose of the purchaseFailure.html file and purchaseFailure method in the purchaseController.java file. In mainscreen.html, I added a form that handles the functionality of the buy button. The input is hidden so that when the button is clicked on,
 it collects the products id and passes it to the buyProduct method for confirm or deny the purchase.
 
 G. Modify the parts to track maximum and minimum inventory by doing the following:
@@ -48,9 +48,13 @@ G. Modify the parts to track maximum and minimum inventory by doing the followin
 •   Rename the file the persistent storage is saved to.
 
 •   Modify the code to enforce that the inventory is between or at the minimum and maximum value.
-File Name:
-Line Number:
-Change:
+File Name: Part.java, BootStrapData.java, InhousePartForm.html, OutsourcedPartForm.html, AddInhousePartController.java, AddOutsouredPartController.java, and application.properties.
+Line Number: Part.java: Line 33, 34, 57, 58, 119 - 131. BootstrapData.java: From line 67 - line 128. InhousePartForm: From lines 25 - 31. OutsourcedPartForm: From Line 25 - 31. AddInhousePartController.java and OutsourcedPartController.java: From line 43 - line 46.
+Change: In the Part.java file on line 33 and 34, I added the max and min inventory fields to the part entity. On line 57 and 58 I added the max and min inventory to the constructor. From 119 to 131 I added getter and setter methods for the min and max inventories.
+In the Bootstrap.java file, I updated each of the parts to include a minimum inventory and a maximum inventory.
+In both inhouse and outsourced part forms html files, I added inputs for the maximum and minimum inventories.
+The database was renamed to gsd287. This can be seen on line 6 of the application.properties file.
+For both AddInHousePartController and AddOutsourcedPartController, I added an if statement in the submitform methods to check if the inv is equal to or between the max and min inventory amounts, if there is not an error appears in the form. This is seen on line 43 - line 46 on both pages.
 
 H. Add validation for between or at the maximum and minimum fields. The validation must include the following:
 

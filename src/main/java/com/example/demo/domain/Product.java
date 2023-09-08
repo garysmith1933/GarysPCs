@@ -99,7 +99,6 @@ public class Product implements Serializable {
 
         return id == product.id;
     }
-
     @Override
     public int hashCode() {
         return (int) (id ^ (id >>> 32));

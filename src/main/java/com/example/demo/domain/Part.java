@@ -129,8 +129,16 @@ public abstract class Part implements Serializable {
         this.minInv = minInv;
     }
 
-    public boolean invIsValid(int inv) {
+    public boolean invIsValid() {
         return this.inv >= this.minInv && this.inv <= maxInv;
+    }
+
+    public boolean isBelowMinInv() {
+        return this.inv < this.minInv;
+    }
+
+    public boolean isAboveMaxInv() {
+        return this.inv > this.maxInv;
     }
 }
 

@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Purchase Success</title>
-    <link rel="stylesheet" type="text/css" href="../static/css/demo.css">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/demo.css}"/>
 </head>
 <body>
+    <nav><a id="returnHome" th:href="@{/mainscreen}">Home</a></nav>
     <h1>Purchase Successful!</h1>
     <p th:text="${success}">Your order is placed</p>
 </body>

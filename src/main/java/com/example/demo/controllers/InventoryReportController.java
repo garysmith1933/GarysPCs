@@ -27,7 +27,7 @@ public class InventoryReportController {
     public String generateProductInventoryReport(Model model){
         List<Product> allProducts = productService.findAll();
         model.addAttribute("products", allProducts);
-        return "inventoryReport";
+        return "productInventoryReport";
     }
 
     @GetMapping("/partInventoryReport")

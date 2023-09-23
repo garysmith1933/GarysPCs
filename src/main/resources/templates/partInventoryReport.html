@@ -13,14 +13,14 @@
 
     <link rel="stylesheet" type="text/css" th:href="@{/css/demo.css}" />
 
-    <title>Inventory Report </title>
+    <title> Part Inventory Report </title>
 </head>
 
 <body>
 
-<div class="container">
-    <nav><a id="returnHome" th:href="@{/mainscreen}">Home</a></nav>
-    <h1> Inventory Report </h1>
+<div class="p-5">
+    <nav class="mb-5"><a id="returnHome" th:href="@{/mainscreen}">Home</a></nav>
+    <h3> Part Inventory Report </h3>
     <hr>
     <table class="table table-bordered table-striped">
         <thead class="thead-dark">
@@ -38,7 +38,7 @@
             <td th:text="${part.price}"></td>
             <td th:text="${part.inv}"></td>
             <td th:text="${part.createdAt}"></td>
-            <td th:text="${part.inv <= (part.minInv + 11)  ? 'Inventory of this part should be restocked.' : null }"></td>
+            <td th:text="${part.inv <= (part.minInv + 5)  ? 'Inventory of this part should be restocked soon.' : null }"></td>
         </tr>
 
         </tbody>

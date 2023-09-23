@@ -40,35 +40,16 @@ public class BootStrapData implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
-       /*
-        OutsourcedPart o= new OutsourcedPart();
-        o.setCompanyName("Western Governors University");
-        o.setName("out test");
-        o.setInv(5);
-        o.setPrice(20.0);
-        o.setId(100L);
-        outsourcedPartRepository.save(o);
-        OutsourcedPart thePart=null;
-        List<OutsourcedPart> outsourcedParts=(List<OutsourcedPart>) outsourcedPartRepository.findAll();
-        for(OutsourcedPart part:outsourcedParts){
-            if(part.getName().equals("out test"))thePart=part;
-        }
-
-        System.out.println(thePart.getCompanyName());
-        */
-
-        this.productRepository.deleteAll();
-        this.partRepository.deleteAll();
-
         //MY PARTS
         OutsourcedPart RAM= new OutsourcedPart();
         RAM.setCompanyName("Some Company");
         RAM.setName("16GB DDR5 RAM");
-        RAM.setInv(12);
+        RAM.setInv(26);
         RAM.setPrice(90.0);
         RAM.setId(100L);
-        RAM.setMaxInv(20);
-        RAM.setMinInv(12);
+        RAM.setMinInv(25);
+        RAM.setMaxInv(100);
+
 
         if (this.partRepository.search(RAM.getName()).isEmpty()) {
             outsourcedPartRepository.save(RAM);
@@ -84,10 +65,10 @@ public class BootStrapData implements CommandLineRunner {
         OutsourcedPart powerSupply = new OutsourcedPart();
         powerSupply.setCompanyName("Some Company");
         powerSupply.setName("650W Power Supply");
-        powerSupply.setInv(30);
+        powerSupply.setInv(32);
         powerSupply.setPrice(60.0);
         powerSupply.setId(101L);
-        powerSupply.setMinInv(20);
+        powerSupply.setMinInv(25);
         powerSupply.setMaxInv(50);
 
         if (this.partRepository.search(powerSupply.getName()).isEmpty()) {
@@ -104,11 +85,11 @@ public class BootStrapData implements CommandLineRunner {
         OutsourcedPart pcCase = new OutsourcedPart();
         pcCase.setCompanyName("Some Company");
         pcCase.setName("Custom Gaming PC Case");
-        pcCase.setInv(30);
+        pcCase.setInv(34);
         pcCase.setPrice(100.0);
         pcCase.setId(102L);
-        pcCase.setMinInv(30);
-        pcCase.setMaxInv(20);
+        pcCase.setMinInv(25);
+        pcCase.setMaxInv(100);
 
         if (this.partRepository.search(pcCase.getName()).isEmpty()) {
             outsourcedPartRepository.save(pcCase);
@@ -127,8 +108,8 @@ public class BootStrapData implements CommandLineRunner {
         rgb.setInv(50);
         rgb.setPrice(30.0);
         rgb.setId(103L);
-        rgb.setMinInv(20);
-        rgb.setMaxInv(50);
+        rgb.setMinInv(25);
+        rgb.setMaxInv(100);
 
         if (this.partRepository.search(rgb.getName()).isEmpty()) {
             outsourcedPartRepository.save(rgb);
@@ -146,8 +127,8 @@ public class BootStrapData implements CommandLineRunner {
         gc.setInv(20);
         gc.setPrice(500.0);
         gc.setId(104L);
-        gc.setMinInv(20);
-        gc.setMaxInv(50);
+        gc.setMinInv(25);
+        gc.setMaxInv(100);
 
 
         if (this.partRepository.search(gc.getName()).isEmpty()) {
@@ -165,13 +146,6 @@ public class BootStrapData implements CommandLineRunner {
         for(OutsourcedPart part:outsourcedParts){
             System.out.println(part.getName()+" "+part.getCompanyName());
         }
-
-        /*
-        Product bicycle= new Product("bicycle",100.0,15);
-        Product unicycle= new Product("unicycle",100.0,15);
-        productRepository.save(bicycle);
-        productRepository.save(unicycle);
-        */
 
         //My Products
         Product customPC = new Product("Custom PC Build", 800.0, 50);

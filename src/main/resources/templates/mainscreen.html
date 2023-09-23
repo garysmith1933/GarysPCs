@@ -16,9 +16,9 @@
     <title>Garys PCs</title>
 </head>
 
-<div class="container">
+<div class="p-5">
     <nav id="mainNav"><a id="aboutPage" th:href="@{/about}">About</a></nav>
-    <h1>Garys PCs</h1>
+    <h1 class="report-title">Garys PCs</h1>
     <hr>
     <h2>PC Parts</h2>
     <form th:action="@{/mainscreen}">
@@ -31,6 +31,7 @@
     <br><br>
     <a th:href="@{/showFormAddInPart}" class="btn btn-primary btn-sm mb-3">Add Inhouse Part</a>
     <a th:href="@{/showFormAddOutPart}" class="btn btn-primary btn-sm mb-3">Add Outsourced Part</a>
+    <a th:href="@{/partInventoryReport}" class="btn btn-primary btn-sm mb-3">Part Inventory Report</a>
     <table class="table table-bordered table-striped">
         <thead class="thead-dark">
         <tr>
@@ -68,6 +69,7 @@
     </script>
     <br><br>
     <a th:href="@{/showFormAddProduct}" class="btn btn-primary btn-sm mb-3">Add Product</a>
+    <a th:href="@{/productInventoryReport}" class="btn btn-primary btn-sm mb-3">Product Inventory Report</a>
     <table class="table table-bordered table-striped">
         <thead class="thead-dark">
         <tr>

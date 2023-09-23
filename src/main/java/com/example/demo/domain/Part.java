@@ -1,5 +1,7 @@
 package com.example.demo.domain;
 
+import org.hibernate.annotations.CreationTimestamp;
+
 import javax.persistence.*;
 import javax.validation.constraints.Min;
 import java.io.Serializable;
@@ -29,7 +31,7 @@ public abstract class Part implements Serializable {
     @Min(value=0, message = "Inventory minimum must be higher")
     int minInv;
     int maxInv;
-    @Temporal(TemporalType.TIMESTAMP)
+    @CreationTimestamp
     Date createdAt;
 
     @ManyToMany

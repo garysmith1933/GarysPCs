@@ -57,6 +57,9 @@ public class BootStrapData implements CommandLineRunner {
         System.out.println(thePart.getCompanyName());
         */
 
+        this.productRepository.deleteAll();
+        this.partRepository.deleteAll();
+
         //MY PARTS
         OutsourcedPart RAM= new OutsourcedPart();
         RAM.setCompanyName("Some Company");

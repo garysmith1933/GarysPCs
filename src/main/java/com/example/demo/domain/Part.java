@@ -3,6 +3,7 @@ package com.example.demo.domain;
 import javax.persistence.*;
 import javax.validation.constraints.Min;
 import java.io.Serializable;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -28,7 +29,8 @@ public abstract class Part implements Serializable {
     @Min(value=0, message = "Inventory minimum must be higher")
     int minInv;
     int maxInv;
-
+    @Temporal(TemporalType.TIMESTAMP)
+    Date createdAt;
 
     @ManyToMany
     @JoinTable(name="product_part", joinColumns = @JoinColumn(name="part_id"),

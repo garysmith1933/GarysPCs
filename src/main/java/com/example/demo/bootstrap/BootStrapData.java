@@ -174,27 +174,27 @@ public class BootStrapData implements CommandLineRunner {
         */
 
         //My Products
-        Product customPC = new Product("Custom PC Build", 800.0, 15);
+        Product customPC = new Product("Custom PC Build", 800.0, 50);
         if (this.productRepository.search(customPC.getName()).isEmpty()){
             productRepository.save(customPC);
         }
 
-        Product highEndPC = new Product("High-End Gaming PC", 1200.0, 12);
+        Product highEndPC = new Product("High-End Gaming PC", 1200.0, 25);
         if (this.productRepository.search(highEndPC.getName()).isEmpty()) {
             productRepository.save(highEndPC);
         }
 
-        Product budgetPC = new Product("Budget Gaming PC", 600.0, 12);
+        Product budgetPC = new Product("Budget Gaming PC", 600.0, 50);
         if (this.productRepository.search(budgetPC.getName()).isEmpty()) {
             productRepository.save(budgetPC);
         }
 
-        Product gamingLaptop = new Product("Gaming Laptop", 700.0, 12);
+        Product gamingLaptop = new Product("Gaming Laptop", 700.0, 24);
         if (this.productRepository.search(gamingLaptop.getName()).isEmpty()) {
             productRepository.save(gamingLaptop);
         }
 
-        Product highEndLaptop = new Product("High-End Laptop", 1000.0, 12);
+        Product highEndLaptop = new Product("High-End Laptop", 1000.0, 22);
         if (this.productRepository.search(highEndLaptop.getName()).isEmpty()) {
             System.out.println("saving");
             productRepository.save(highEndLaptop);

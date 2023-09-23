@@ -38,7 +38,7 @@
                 <td th:text="${product.price}"></td>
                 <td th:text="${product.inv}"></td>
                 <td th:text="${product.createdAt}"></td>
-                <td th:text="${product.inv <= 12 ? 'something' : 'something else' }"></td>
+                <td th:text="${product.inv <= 25 ? 'Inventory of this product should be restocked.' : null }"></td>
             </tr>
 
             </tbody>

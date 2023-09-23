@@ -22,17 +22,17 @@ import java.util.Set;
 public abstract class Part implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    long id;
-    String name;
+    public long id;
+    public String name;
     @Min(value = 0, message = "Price value must be positive")
-    double price;
+    public double price;
     @Min(value = 0, message = "Inventory value must be positive")
-    int inv;
+    public int inv;
     @Min(value=0, message = "Inventory minimum must be higher")
-    int minInv;
-    int maxInv;
+    public int minInv;
+    public int maxInv;
     @CreationTimestamp
-    Date createdAt;
+    public Date createdAt;
 
     @ManyToMany
     @JoinTable(name="product_part", joinColumns = @JoinColumn(name="part_id"),
@@ -131,10 +131,6 @@ public abstract class Part implements Serializable {
 
     public void setMinInv(int minInv) {
         this.minInv = minInv;
-    }
-
-    public boolean invIsValid() {
-        return this.inv >= this.minInv && this.inv <= maxInv;
     }
 
     public boolean isBelowMinInv() {

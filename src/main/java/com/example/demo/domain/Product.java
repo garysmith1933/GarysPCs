@@ -30,9 +30,6 @@ public class Product implements Serializable {
     double price;
     @Min(value = 0, message = "Inventory value must be positive")
     int inv;
-//    @Min(value=0, message = "Inventory minimum must be higher")
-////    int minInv;
-////    int maxInv;
     @CreationTimestamp
     Date createdAt;
 
@@ -102,20 +99,6 @@ public class Product implements Serializable {
     public Date getCreatedAt() {
         return this.createdAt;
     }
-
-//    public int getMaxInv() {
-//        return this.maxInv;
-//    }
-//
-//    public void setMaxInv(int maxInv) {
-//        this.maxInv = maxInv;
-//    }
-//
-//    public int getMinInv(){ return this.minInv; }
-//
-//    public void setMinInv(int minInv) {
-//        this.minInv = minInv;
-//    }
 
     @Override
     public boolean equals(Object o) {

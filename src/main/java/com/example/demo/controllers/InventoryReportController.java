@@ -26,9 +26,6 @@ public class InventoryReportController {
     @GetMapping("/productInventoryReport")
     public String generateProductInventoryReport(Model model){
         List<Product> allProducts = productService.findAll();
-        allProducts.forEach(product -> {
-            System.out.println(product.getCreatedAt());
-        });
         model.addAttribute("products", allProducts);
         return "inventoryReport";
     }
@@ -37,6 +34,6 @@ public class InventoryReportController {
     public String generatePartInventoryReport(Model model){
         List<Part> allParts = partService.findAll();
         model.addAttribute("parts", allParts);
-        return "inventoryReport";
+        return "partInventoryReport";
     }
 }

@@ -108,6 +108,10 @@ public abstract class Part implements Serializable {
         return id == part.id;
     }
 
+    public Date getCreatedAt() {
+        return this.createdAt;
+    }
+
     @Override
     public int hashCode() {
         return (int) (id ^ (id >>> 32));

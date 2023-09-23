@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Error with purchase</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/demo.css}"/>
+</head>
+<body>
+    <nav><a id="returnHome" th:href="@{/mainscreen}">Home</a></nav>
+    <h1>Error!</h1>
+    <p th:text="${error}">Something went wrong</p>
+</body>
+</html>

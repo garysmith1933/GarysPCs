@@ -65,9 +65,7 @@ public class AddProductController {
             return "productForm";
         }
 
- //       theModel.addAttribute("assparts", assparts);
- //       this.product=product;
-//        product.getParts().addAll(assparts);
+
         else {
             ProductService repo = context.getBean(ProductServiceImpl.class);
             if(product.getId()!=0) {
@@ -81,9 +79,7 @@ public class AddProductController {
                     }
                 }
             }
-            else{
-                product.setInv(0);
-            }
+
             repo.save(product);
             return "confirmationaddproduct";
         }

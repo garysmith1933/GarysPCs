@@ -40,6 +40,9 @@ public class BootStrapData implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
+        partRepository.deleteAll();
+        productRepository.deleteAll();
+
         //MY PARTS
         OutsourcedPart RAM= new OutsourcedPart();
         RAM.setCompanyName("Some Company");
@@ -124,7 +127,7 @@ public class BootStrapData implements CommandLineRunner {
         OutsourcedPart gc = new OutsourcedPart();
         gc.setCompanyName("Some Company");
         gc.setName("Graphics Card");
-        gc.setInv(20);
+        gc.setInv(29);
         gc.setPrice(500.0);
         gc.setId(104L);
         gc.setMinInv(25);

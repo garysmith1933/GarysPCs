@@ -13,6 +13,8 @@
     <!-- Add hidden form field to handle update -->
         <p><input type="hidden" th:field="*{id}"/></p>
 
+        <p><input type="text" th:field="*{partId}" placeholder="Part ID" class="form-control mb-4 col-4"/></p>
+
         <p><input type="text" th:field="*{name}" placeholder="Name" class="form-control mb-4 col-4"/></p>
 
         <p><input type="text" path="price" th:field="*{price}" placeholder= "Price" class="form-control mb-4 col-4"/></p>
@@ -20,8 +22,6 @@
 
         <p><input type="text" path="inv" th:field="*{inv}" placeholder="Inventory" class="form-control mb-4 col-4"/></p>
         <p th:if="${#fields.hasErrors('inv')}" th:errors="*{inv}">Inventory Error</p>
-
-        <p><input type="text" th:field="*{partId}" placeholder="Part ID" class="form-control mb-4 col-4"/></p>
 
         <!-- Min Inventory -->
         <p><input type="text" path="minInv" th:field="*{minInv}" placeholder="Minimum Inventory" class="form-control mb-4 col-4"/></p>

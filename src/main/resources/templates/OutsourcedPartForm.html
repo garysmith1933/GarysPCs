@@ -7,6 +7,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
+    <nav><a id="returnHome" th:href="@{/mainscreen}">Home</a></nav>
     <h1>Outsourced Part Detail</h1>
 
     <form action="#" th:action="@{/showFormAddOutPart}" th:object="${outsourcedpart}" method="POST"}>
@@ -34,7 +35,6 @@
 
     <p><input type="submit" value="Submit" /></p>
 </form>
-<a href="http://localhost:8080/">Link
-    to Main Screen</a>
+
 </body>
 </html>

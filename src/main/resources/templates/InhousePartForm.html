@@ -7,6 +7,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
+    <nav><a id="returnHome" th:href="@{/mainscreen}">Home</a></nav>
     <h1>Inhouse Part Detail</h1>
     <form action="#" th:action="@{/showFormAddInPart}" th:object="${inhousepart}" method="POST"}>
     <!-- Add hidden form field to handle update -->
@@ -34,7 +35,5 @@
     </form>
     <p><errors path="price" cssClass=""error/><p>
 
-    <a href="http://localhost:8080/">Link
-        to Main Screen</a>
     </body>
 </html>

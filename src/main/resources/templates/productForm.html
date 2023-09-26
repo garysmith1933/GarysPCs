@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Part Form</title>
 
-<!--    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />-->
 </head>
 <body>
+
+<nav><a id="returnHome" th:href="@{/mainscreen}">Home</a></nav>
 <h1>Product Detail</h1>
 <form action="#" th:action="@{/showFormAddProduct}" th:object="${product}" method="POST"}>
-    <!-- Add hidden form field to handle update -->
     <p><input type="hidden" th:field="*{id}"/></p>
 
     <p><input type="text" th:field="*{name}" placeholder="Name" class="form-control mb-4 col-4"/></p>
@@ -70,8 +70,5 @@
         </tr>
         </tbody>
     </table>
-
-<!--<footer><a href="http://localhost:8080/">Link-->
-<!--    to Main Screen</a></footer>-->
 </body>
 </html>

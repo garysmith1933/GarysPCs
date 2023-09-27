@@ -2,13 +2,18 @@ stages:          # List of stages for jobs, and their order of execution
   - build
   - deploy
 
+maven:build-job:
+  stage: build
+  image: maven:3.6.3-jdk-11
+  script:
+    - mvn clean package
+
 build-job:  # This job runs in the build stage, which runs first.
   image: docker@sha256:c8bb6fa5388b56304dd770c4bc0478de81ce18540173b1a589178c0d31bfce90
   services:
     - docker:dind@sha256:c8bb6fa5388b56304dd770c4bc0478de81ce18540173b1a589178c0d31bfce90  
   stage: build
   script:
-    - "mvn clean package"
     - docker build -t registry.gitlab.com/wgu-gitlab-environment/student-repos/gsmi572/d424-software-engineering-capstone .
     - docker login registry.gitlab.com -u gsmi572 -p basic103!#
     - docker push registry.gitlab.com/wgu-gitlab-environment/student-repos/gsmi572/d424-software-engineering-capstone

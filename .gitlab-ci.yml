@@ -1,9 +1,9 @@
 stages:          # List of stages for jobs, and their order of execution
-  - install
+  - create
   - build
   - deploy
 
-maven:build-job:
+install-maven:
   stage: install
   image: maven:3.8.3-openjdk-17
   script:

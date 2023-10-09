@@ -16,7 +16,7 @@ build-job:  # This job runs in the build stage, which runs first.
   stage: build
   script:
     - echo $DOCKER_USERNAME echo $DOCKER_PASSWORD
-    - docker login  -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+    - docker login  -u gsmi572 -p basic103!#
     - docker build -t registry.gitlab.com/gsmi572/gs-pcs .
     - docker push registry.gitlab.com/gsmi572/gs-pcs
 

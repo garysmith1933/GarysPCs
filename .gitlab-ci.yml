@@ -16,7 +16,7 @@ build-job:  # This job runs in the build stage, which runs first.
   stage: build
   script:
     - docker build -t registry.gitlab.com/wgu-gitlab-environment/student-repos/gsmi572/d424-software-engineering-capstone .
-    - docker login registry.gitlab.com -u gsmi572 -p basic103!#
+    - docker login registry.gitlab.com -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
     - docker push registry.gitlab.com/wgu-gitlab-environment/student-repos/gsmi572/d424-software-engineering-capstone
 
 
@@ -25,7 +25,7 @@ deploy-job:      # This job runs in the deploy stage.
  
   script:
     - echo "Deploying application..."
-    - curl -X POST https://api.render.com/deploy/srv-ck90qqcnli2s7381i4f0?key=mgVDCBAmC_A
+    - curl -X POST $DEPLOY_HOOK_URL
     - echo "Application successfully deployed."
 
   only:

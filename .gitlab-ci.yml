@@ -1,9 +1,10 @@
 stages:          # List of stages for jobs, and their order of execution
+  - install
   - build
   - deploy
 
 maven:build-job:
-  stage: build
+  stage: install
   image: maven:3.8.3-openjdk-17
   script:
     - mvn clean package
@@ -16,7 +17,7 @@ build-job:  # This job runs in the build stage, which runs first.
   stage: build
   script:
     - echo $DOCKER_USERNAME echo $DOCKER_PASSWORD
-    - docker login  -u gsmi572 -p basic103!#
+    - docker login registry.gitlab.com -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
     - docker build -t registry.gitlab.com/gsmi572/gs-pcs .
     - docker push registry.gitlab.com/gsmi572/gs-pcs
 

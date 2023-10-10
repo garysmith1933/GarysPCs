@@ -1,13 +1,12 @@
 stages:          # List of stages for jobs, and their order of execution
-  - create
   - build
   - deploy
-
-create-package:
-  stage: create
-  image: maven:3.8.3-openjdk-17
-  script:
-    - mvn clean package
+#
+#create-package:
+#  stage: create
+#  image: maven:3.8.3-openjdk-17
+#  script:
+#    - mvn clean package
 
 # A simple comment
 build-job:  # This job runs in the build stage, which runs first.

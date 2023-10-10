@@ -53,13 +53,17 @@ public class AddProductController {
         theModel.addAttribute("product", product);
 
         if(bindingResult.hasErrors()){
+
             ProductService productService = context.getBean(ProductServiceImpl.class);
-            Product product2=productService.findById((int)product.getId());
+            Product product2 = productService.findById( (int)product.getId() );
             theModel.addAttribute("parts", partService.findAll());
+
             List<Part>availParts=new ArrayList<>();
-            for(Part p: partService.findAll()){
-                if(!product2.getParts().contains(p))availParts.add(p);
+
+            for (Part p: partService.findAll()) {
+                if( !product2.getParts().contains(p) ) availParts.add(p);
             }
+
             theModel.addAttribute("availparts",availParts);
             theModel.addAttribute("assparts",product2.getParts());
             return "productForm";
@@ -150,7 +154,6 @@ public class AddProductController {
     @GetMapping("/removepart")
     public String removePart(@RequestParam("partID") int theID, Model theModel){
         theModel.addAttribute("product", product);
-      //  Product product1=new Product();
         product1.getParts().remove(partService.findById(theID));
         partService.findById(theID).getProducts().remove(product1);
         ProductService productService = context.getBean(ProductServiceImpl.class);
